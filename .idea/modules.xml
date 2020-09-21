@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/Desktop/SubwaySystem/SubwaySystem.iml" filepath="$USER_HOME$/Desktop/SubwaySystem/SubwaySystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com-itheima-edu-info-manager/com-itheima-edu-info-manager.iml" filepath="$PROJECT_DIR$/com-itheima-edu-info-manager/com-itheima-edu-info-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/object/object.iml" filepath="$PROJECT_DIR$/object/object.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subway/subway.iml" filepath="$PROJECT_DIR$/subway/subway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/text-permission/text-permission.iml" filepath="$PROJECT_DIR$/text-permission/text-permission.iml" />
+    </modules>
+  </component>
+</project>

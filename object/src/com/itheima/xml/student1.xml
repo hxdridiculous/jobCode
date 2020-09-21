@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE students [
+        <!ELEMENT students (student+)>
+        <!ELEMENT student (name,age)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT age (#PCDATA)>
+        <!ATTLIST student id CDATA #REQUIRED>
+        ]>
+<students>
+    <student id = "1">
+        <name>张三</name>
+        <age>23</age>
+        <!--小于 大于 和号 单引号 引号-->
+        <!--<info>学生&lt;&gt;&amp;&apos;&quot;</info>-->
+    </student>
+    <student id = "2">
+        <name>李四</name>
+        <age>24</age>
+        <!--<info><![CDATA[学生>>>>><<<<<<<<]]]]></info>-->
+    </student>
+</students>

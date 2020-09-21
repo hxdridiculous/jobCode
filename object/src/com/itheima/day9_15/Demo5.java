@@ -1,0 +1,29 @@
+package com.itheima.day9_15;
+
+import java.io.*;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
+public class Demo5 {
+    public static void main(String[] args) throws IOException {
+        ServerSocket ss = new ServerSocket(10001);
+        ThreadPoolExecutor pool = new ThreadPoolExecutor(
+                3,//核心线程数量
+                10,   //线程池的总数量
+                60,   //临时线程空闲时间
+                TimeUnit.SECONDS, //临时线程空闲时间的单位
+                new ArrayBlockingQueue<>(5),//阻塞队列
+                Executors.defaultThreadFactory(),//创建线程的方式
+                new ThreadPoolExecutor.AbortPolicy());//任务拒绝策略
+        while (true) {
+            Socket accept = ss.accept();
+            ThreadSocket threadSocket = new ThreadSocket(accept);
+            //new Thread(threadSocket).start();
+            pool.submit(threadSocket);
+        }
+    }
+}
